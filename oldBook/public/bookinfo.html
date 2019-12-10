@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js" type="text/javascript"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../public/static/css/Pc_tan_index_page-2169257737.css">
+    <title class="book_title"></title>
+</head>
+<body style="margin: 0;">
+    <!-- title部分 -->
+<div style="width: 100%;height: 36px;background: #8c222c;line-height: 36px;color:#e2c8ca;">
+    <span style="float: left;margin-left: 100px;font-size: 12px">网络校园旧书 方便你我他</span>
+    <div style="font-size: 20px;position:absolute;margin-left: 940px;line-height: 1.5;"><a style="font-size: 12px;font-weight: normal;color:#e2c8ca;text-decoration:none;" href="login.html">登录/注册</a></div>
+    <div style="font-size: 20px;position:absolute;left:1005px;line-height: 1.5;"><a style="font-size: 12px;font-weight: normal;color:#e2c8ca;text-decoration:none;" href="userinfo.html">我的订单</a></div>
+    <div style="font-size: 20px;position:absolute;left:1070px;line-height: 1.5;"><a style="font-size: 12px;font-weight: normal;color:#e2c8ca;text-decoration:none;" href="userinfo.html">个人中心</a></div>
+    <div style="font-size: 20px;position:absolute;left:1135px;line-height: 1.5;"><a style="font-size: 12px;font-weight: normal;color:#e2c8ca;text-decoration:none;" href="userinfo.html">卖家中心</a></div>
+</div>
+<div class="header-search-box" style="background-image: url('./images/a95a6910e965dc29986fac375bdbf77865aa7ac4308f8e-tCVHtQ_fw658.jpg');">
+    <div class="header-search" style="bottom: 10px;">
+                <h1 style="color: white;">欧德书屋</h1>
+        <div class="search-box clearfix">
+            <form id="searchForm" class="search-con">
+                <div id="statusBox" class="search-status-box">
+                    <div class="cur-status" type="itemname">
+                                            <span>商品名称</span>
+                                            <span class="iconfont icon-xiala"></span>
+                        <span class="iconfont icon-shangshou"></span>
+                    </div>
+                                            <div class="status-other">
+                            <div class="item" type="shopname">店铺名称</div>
+                            <div class="item" type="nickname">店主昵称</div>
+                        </div>
+
+                </div>
+                <div class="search-put">
+                    <input type="text" name="searchWord" autocomplete="off" value="">
+                    <div id="searchSugBox" class="sug-box"></div>
+                </div>
+                <div id="searchBtn" class="btn">搜索</div>
+            </form>
+            <div class="search-link">
+                <a href="http://search.kongfz.com/adv.html" target="_blank" rel="nofollow">高级搜索</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="width: 1000px;height: auto;margin:10px auto;">
+    <div style="width: 100%;height: 100px;padding-top: 30px;margin: auto;background: url('./images/5.jpg');text-align: center;color: #c2f2d2;letter-spacing: 5px;">
+        <a id='user-shop' href="#" style="color: green;"><h1 id="shop_title"></h1></a>
+    </div>
+    <div style="width: 300px;height:300px;border: 1px solid gray;float: left;margin: 50px 0;overflow: hidden;">
+        <img id="book_img" src="" alt="nothing" style="height:300px;margin: auto;"/>
+    </div>
+    <div style="margin-left: 100px;float: left;margin-top: 50px;line-height: 3;">
+        <h2 class="book_title" ></h2>
+        <p id="book_message" ></p>
+        <p style="font-size: 19px;color: #8e292f;display: inline;">￥</p><p id="book_price" style="display: inline;font-size: 19px;color: #8e292f;"></p>
+        <span style="display: block;color: gray;">上架时间:<p id="book_date" style="display: inline;margin-left: 10px;"></p></span>
+        <div style="padding: 1px 15px ;margin-top: 20px;background: #f8f7f3;border: 1px solid #8e292f;color: #8e292f;text-align: center;cursor: pointer;" data-toggle="modal" data-target=".bd-example-modal-lg">立即购买</div>
+    </div>  
+    <hr style="margin-top: 360px;" /> 
+</div>
+<div style="width: 1000px;height: auto;margin:10px auto;">
+    <div style="height:60px;background: #fafafa;border:1px solid #a599995e ;padding: 15px 20px;">
+    <div class="xiang" style="display: inline;font-size: 20px;background: #fafafa;">商品详情</div>
+    <div class="ping" style="display: inline;font-size: 20px;margin-left: 20px;background: #fafafa;">商品评价</div>
+    </div>
+    <div style="width: 100%;height: auto;margin-top: 20px;padding: 0 20px;">
+    <span style="display: block;margin: 10px 0;">分类:<p id="book_kind" style="display: inline;"></p></span>
+    <span style="display: block;margin: 10px 0;">详情:<p class="book_message" style="display: inline;"></p></span>
+    <img class="book_img" src="" style="width:300px;margin:10px auto;display: block;" />
+    <img class="book_img" src="" style="width:300px;margin:10px auto;display: block;" />
+    </div>
+</div>
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" style="height: 600px;padding: 60px;">
+            <h2 style="margin-bottom: 20px">立即购买</h2>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <img class="book_img" src="" style="width: 200px;">
+                   <div style="margin-left: 20px;line-height: 3;"> <h2 class="book_title" ></h2>
+                    <p style="font-size: 19px;color: #8e292f;display: inline;">￥</p><p class="book_price" style="display: inline;font-size: 19px;color: #8e292f;"></p>
+        <span style="display: block;color: gray;">上架时间:<p class="book_date" style="display: inline;margin-left: 10px;"></p></span>
+                    </div>
+                </div>
+               
+            </div>
+          
+            <div class="input-group mb-3" style="margin-top: 15px;">
+                
+               
+            </div>
+           
+            <div style="top: 100px;position: relative;margin: auto"><button style="padding: 1px 55px ;margin-top: 20px;background: #f8f7f3;border: 1px solid #8e292f;color: #8e292f;text-align: center;cursor: pointer;" onclick="NowBuy()">立即购买</button></div>
+
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    var book_id = getQueryVariable("bookId");
+    $(document).ready(function() { 
+        $.ajax({
+            url: '/book/'+book_id,
+            type: 'get',
+            // 设置的是请求参数
+            // data: {name: $('.name').val(), password: $('.password').val()},
+            // 用于设置响应体的类型 注意 跟 data 参数没关系！！！
+            dataType: 'json',
+            success:  function (res) {
+               if(res["message"]==="获取成功！"){
+                  $(".book_title").text(res["book_list"]["title"])
+                  $("#book_message").text(res["book_list"]["messages"])
+                  $(".book_message").text(res["book_list"]["messages"])
+                  $("#book_img").attr("src","booksImages/"+res["book_list"]["images"])
+                  $(".book_img").attr("src","booksImages/"+res["book_list"]["images"])
+                  $("#book_price").text(res["book_list"]["price"])
+                  $(".book_price").text(res["book_list"]["price"])
+                  $("#shop_title").text(res["user_name"]+"的书摊")
+                  $("#book_date").text(res["date"])
+                  $(".book_date").text(res["date"])
+                  $("#book_kind").text(res["book_list"]["kind"])
+                  $("#user-shop").attr("href","/public/userinfo.html")
+               }
+            }
+        })
+    });
+function NowBuy(){
+    $.ajax({
+            url: '/buy',
+            type: 'post',
+            // 设置的是请求参数
+            // data: {name: $('.name').val(), password: $('.password').val()},
+            // 用于设置响应体的类型 注意 跟 data 参数没关系！！！
+            dataType: 'json',
+            success:  function (res) {
+
+        }
+    });
+}
+function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+</script>
+</html>
